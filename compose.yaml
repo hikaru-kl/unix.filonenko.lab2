@@ -1,0 +1,12 @@
+
+services:
+  worker:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - shared-data:/shared
+
+volumes:
+  shared-data:
+    name: unix-lab2-shared
+
